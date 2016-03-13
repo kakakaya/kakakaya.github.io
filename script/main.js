@@ -1,29 +1,35 @@
-$(document).ready(function() {
-    $('.later').hide();
-    $('a').hover(
-	function() {
-	    $(this).append($("<span></span>"));
-	},
-	function() {
-	    $(this).find("span:last").remove();
-	}
-    );
-    $('h2').hover(
-	// h2のonMouseで
-	function() {
-	    // 動いてなければ
-	    if ($('*').not(':animated')) {
-		$(this).parent(".category").children('.later')
-		    .animate({opacity:"toggle", "height":"toggle"}, "fast");
-	    }
-	},
-	function() {
-	    // 動いてれば
-	    if ($('*').not(':animated')) {
-		$(this).parent(".category").children('.later')
-		    .animate({opacity:"toggle", "height":"toggle"}, "fast");
-	    }
-	}
-    );
+$(function() {
+  // $('.later').hide();
+  $("#contents").accordion({
+    event:"click, mouseover",
+    heightStyle: "content"
+  });
 
+  $("#dialog").hide();
+
+  $("#dialog").dialog({
+    autoOpen: false,
+    show: {
+      effect: "slide",
+      direction: "right",
+      duration: 500
+    },
+    hide: {
+      effect: "slide",
+      direction: "left",
+      duration: 500
+    }
+  });
+
+  $("h1").click(function() {
+    $("#dialog").dialog("open");
+  });
+
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    // mobile
+    console.log("mobile");
+  } else {
+    console.log("desktop");
+  }
 });
+

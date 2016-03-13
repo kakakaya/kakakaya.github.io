@@ -3,71 +3,58 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
-    <!-- <link href="./css/reset.css" rel="stylesheet"/> -->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet"/>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="./css/style.css" rel="stylesheet"/>
     <script type="text/javascript" src="./static/ga.js" async></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
     <script type="text/javascript" src="./script/main.js"></script>
     <title>kakakaya</title>
   </head>
   <body>
     <h1>kakakaya</h1>
     <hr/>
-    <div id="abstract" class="category">
-      <h2>Abstract</h2>
-      <div class="later">(そのうち書く)</div>
-    </div>
-    <div id="profile" class="category">
-      <h2>Profile</h2>
-      <div class="later">(そのうち書く)</div>
-    </div>
-    <div id="like" class="category">
-      <h2>list</h2>
-      <div class="drive">
+    <div id="contents">
+      <h2 class="clickable">Profile</h2>
+      <div class="profile">
+        (そのうち書く)
+      </div>
+      <h2 class="clickable">Interests</h2>
+      <div class="interests">
+        <p>以下のようなものに興味があります:</p>
         <ul class="link_like">
-          <ul class="list_item">
+          <li class="interest">
+            <a href=""><i class="fa fa-code fa-2x"></i>プログラミング</a>
+          </li>
+          <li class="interest">
+            <a href=""><i class="fa fa-keyboard-o fa-2x"></i>キーボードハッキング</a>
+          </li>
+          <li class="interest">
+            <a href=""><i class="fa fa-book fa-2x"></i>読書</a>
+          </li>
+          <li class="interest">
             <a href="https://docs.google.com/spreadsheets/d/1EKy2iBU25K1i8Qlm5NuURyCu4Wnk2CwBeRMTy31PNRw/pubhtml">
               <i class="fa fa-youtube-play fa-2x"></i>アニメ</a>
-          </ul>
-          <ul class="list_item">
+          </li>
+          <li class="interest">
             <a href="https://docs.google.com/spreadsheets/d/110WGmHBAGyU6njEeM49Xyx51LgfTKnegoZ4a37LBUDM/pubhtml">
               <i class="fa fa-gamepad fa-2x"></i>ゲーム</a>
-          </ul>
+          </li>
         </ul>
+        <p>クリックすると詳細に飛びます。</p>
       </div>
-      <div class="later">(そのうちちゃんと書く)</div>
     </div>
-    <div id="link" class="category">
-      <h2>link</h2>
-      <ul class="link">
-        <li class="list_item">
-          <span class="list_item_icon"><a href="https://twitter.com/kakakaya">
-            <i class="fa fa-twitter fa-2x"></i>twitter.com/kakakaya</a></span>
-        </li>
-        <li class="list_item">
-          <span class="list_item_icon"><a href="https://github.com/kakakaya">
-            <i class="fa fa-github-alt fa-2x"></i>github.com/kakakaya</a></span>
-        </li>
-        <li class="list_item">
-          <span class="list_item_icon"><a href="mailto:kakakaya+profile@gmail.com">
-            <i class="fa fa-send-o fa-2x"></i>kakakaya@gmail.com</a></span></li>
-        <li class="list_item">
-          <span class="list_item_icon"><a href="http://steamcommunity.com/id/kakakaya/">
-            <i class="fa fa-steam fa-2x"></i>Steam/kakakaya</a>
-          </span></li>
-        <li class="list_item">
-          <span class="list_item_icon"><a href="http://www.amazon.co.jp/registry/wishlist/UG8PKQ8GMBXF/ref=cm_sw_r_tw_ws_N1LYtb1G1FKCQ">
-            <i class="fa fa-gift fa-2x"></i>wishlist</a>
-          </span></li>
-        <li class="list_item">
-          <a href='https://alpha.app.net/kakakaya' class='adn-button' target='_blank' data-type='follow' data-width='277' data-height='27' data-user-id='@kakakaya' data-show-username='1' rel='me'>Follow me on App.net</a>
-          <script>
-          (function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='//d2zh9g63fcvyrq.cloudfront.net/adn.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'adn-button-js'));
-          </script>
-        </li>
-      </ul>
-    </div>
+    <div id="dialog" title="Dialog?">hoge</div>
   </body>
+  <hr/>
+
+  <footer>
+    <a href="http://www.amazon.co.jp/registry/wishlist/UG8PKQ8GMBXF/ref=cm_sw_r_tw_ws_N1LYtb1G1FKCQ"><i class="fa fa-gift fa-2x"></i></a>
+    <a href="mailto:kakakaya+profile@gmail.com"><img alt="kakakya+profile@gmail.com" src="./static/mail.png"/></a>
+    <a href="https://twitter.com/kakakaya" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @kakakaya</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <a class="github-button" href="https://github.com/kakakaya" aria-label="Follow @kakakaya on GitHub">Follow @kakakaya</a>
+    <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+  </footer>
 </html>
