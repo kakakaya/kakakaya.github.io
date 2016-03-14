@@ -75,29 +75,3 @@ $(function() {
   }
 
 });
-
-// GETしてきたデータを内容毎にパースしてダイアログの具を作る
-function makeDialogContent(interestType, data){
-  var html = "";
-  if (interestType == "アニメ") {
-    html += "<h3>"+data.season+"アニメについて</h3>";
-    if (data.items.length == 0) {
-      html += "<p>最近アニメ見てないです……。(データ取得元:<a href=\"http://animetick.net/\" target=\"_blank\">Animetick</a>)</p>";
-    } else {
-      html += "<p>最近はこの辺を見ています(データ取得元:<a href=\"http://animetick.net/\" target=\"_blank\">Animetick</a>)。</p>";
-      html += "<div class=\"dialog_content_table\"><table>";
-      for(var i = 0; i < data.items.length; i++) {
-        var item = data.items[i];
-        var p = item.progress;
-        html += "<tr><th>"+item.title+"</th><td class=\"count\">"+p.slice(p.indexOf("/")+1)+
-          "</td><td>話中</td><td class=\"count\">"+p.slice(0, p.indexOf("/"))+
-          "</td><td>話視聴済み</td></tr>";
-      }
-      html += "</table></div>";
-      html += "<a href=\"http://animetick.net/users/kakakaya\" target=\"_blank\">続きを見る......</a>";
-    }
-    return html;
-  } else {
-    return "<h1>Unknown Type!</h1><p>"+interestType+":この項目のデータをまだ作っていません。</p>";
-  }
-}
