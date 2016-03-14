@@ -8,7 +8,7 @@ body {
 }
 a {
     color: inherit;
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 h1{
     /* font: 300 20px/32px; */
@@ -36,6 +36,7 @@ hr{
 
 ol,ul{
     list-style:none;
+    -webkit-padding-start: 0px;
 }
 
 li {
@@ -84,7 +85,9 @@ table {
     background-image:      -o-linear-gradient(top,#8faf9f,#3f3f3f);
 }
 
-
+.ui-accordion .ui-accordion-content {
+    padding: 1em 1em;
+}
 
 /* .ui-widget-overlay { */
 /*     position: absolute; */
