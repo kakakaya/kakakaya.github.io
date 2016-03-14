@@ -47,7 +47,7 @@ $(function() {
     $.ajax({
       dataType: "json",
       data: "key=KEY&interest="+title,
-      timeout: 5000,
+      timeout: 8000,
       url: url,
       success: function(data, status) {
         if (status == "success") {
