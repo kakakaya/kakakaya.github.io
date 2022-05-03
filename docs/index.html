@@ -1,80 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
     <!-- css -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="https://code.jquery.com/ui/1.12.0-beta.1/themes/smoothness/jquery-ui.css" rel="stylesheet" />
-    <link href="./css/loading.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/017b56f091.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="./css/style.css" rel="stylesheet" />
-    <link href="./css/mobile.css" rel="stylesheet" media="(max-width: 640px)" />
-    <!-- js -->
-    <script type="text/javascript" src="./static/ga.js" async></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="./script/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Z9105HPKE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-0Z9105HPKE');
+    </script>
+    <meta property="og:title" content="kakakaya">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kakakaya.xyz">
+    <meta property="og:image" content="https://kakakaya.xyz/images/me.jpg">
+    <meta property="og:description" content="kakakaya">
+    <meta property="og:site_name" content="kakakaya.xyz">
     <title>kakakaya</title>
 </head>
 
 <body>
-    <h1>kakakaya</h1>
-    <hr/>
-    <div id="contents">
-        <h2 class="clickable">Profile</h2>
-        <div class="profile">
-            <p>(そのうち書く)</p>
-            <p>早三年/そのうち書くと/言い続け</p>
-        </div>
-        <h2 class="clickable">Interests</h2>
-        <div class="interests">
-            <p>以下のようなものに興味があります:</p>
-            <ul class="link_like">
-                <li class="interest" alt-href="https://github.com/kakakaya">
-                    <i class="fa fa-code fa-2x"></i>プログラミング
-                </li>
-                <li class="interest" alt-href="https://github.com/kakakaya/aquamarine-layout">
-                    <i class="fa fa-keyboard-o fa-2x"></i>キーボードハッキング
-                </li>
-                <li class="interest" alt-href="https://bookmeter.com/u/662575">
-                    <i class="fa fa-book fa-2x"></i>読書
-                </li>
-                <li class="interest" alt-href="http://animetick.net/users/kakakaya">
-                    <i class="fa fa-youtube-play fa-2x"></i>アニメ
-                </li>
-                <li class="interest" alt-href="https://steamcommunity.com/id/kakakaya">
-                    <i class="fa fa-gamepad fa-2x"></i>ゲーム
-                </li>
-            </ul>
-            <p>クリックすると詳細に飛びます。モバイル環境からだと見られないとの噂があります。</p>
+    <!-- もにゃもにゃする気持ち悪い感じのタイトル -->
+    <div class="kakakaya">
+        <div class="glitch">
+            <div class="r">kakakaya</div>
+            <div class="g">kakakaya</div>
+            <div class="b">kakakaya</div>
         </div>
     </div>
-    <div id="dialog" title="Dialog Title">
-        <div id="dialog_content"></div>
+    <!-- 棒 -->
+    <hr class="line" />
+    <div class="container">
+        <h2>Contact</h2>
+        <ul>
+            <li>
+                <i class="fa-solid fa-envelope"></i>
+                <a href="#" class="cryptedmail" data-name="kakakaya+profile" data-domain="gmail" data-tld="com" onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;">
+                </a>
+            </li>
+            <li><a href="https://twitter.com/intent/follow?screen_name=kakakaya"><i class="fa-brands fa-twitter"></i>Twitter</a></li>
+            <li><a href="https://marshmallow-qa.com/kakakaya"><i class="fa-solid fa-person-circle-question"></i>マシュマロ</a></li>
+
+        </ul>
+
+        <h2>Game</h2>
+        <ul>
+            <li><a href="https://steamcommunity.com/id/kakakaya"><i class="fa-brands fa-steam"></i>Steam</a></li>
+        </ul>
+
+
+        <h2>Sports</h2>
+        <ul>
+            <li><a href="https://www.strava.com/athletes/kakakaya"><i class="fa-brands fa-strava"></i>Strava</a></li>
+        </ul>
+        <h2>Otaku</h2>
+        <ul>
+            <li><a href="http://animetick.net/users/kakakaya"><i class="fa-solid fa-square-check"></i>Animetick</a></li>
+            <li><a href="https://www.eventernote.com/users/kakakaya/events"><i class="fa-solid fa-calendar-check"></i>EVENTERNOTE</a></li>
+        </ul>
+
+        <h2>Hack</h2>
+        <ul>
+            <li><a href="https://github.com/kakakaya"><i class="fa-brands fa-github"></i>GitHub</a></li>
+        </ul>
+
+        <h2>et cetera</h2>
+        <ul>
+            <li><a href="https://www.amazon.jp/hz/wishlist/ls/8JZFJS08L8D6?ref_=wl_share"><i class="fa-brands fa-amazon"></i>wishlist</a></li>
+            <li><s><a href="https://bookmeter.com/users/662575"><i class="fa-solid fa-book"></i> 読書メーター</a></s></li>
+        </ul>
     </div>
-    <hr/>
+    <!-- 棒 -->
+    <hr class="line" />
     <footer>
-        <a href="https://www.amazon.co.jp/registry/wishlist/UG8PKQ8GMBXF/ref=cm_sw_r_tw_ws_N1LYtb1G1FKCQ"><i class="fa fa-gift fa-2x"></i></a>
-        <a href="mailto:kakakaya+profile@gmail.com"><img alt="kakakya+profile@gmail.com" src="./static/mail.png"/></a>
-        <a href="https://twitter.com/kakakaya" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @kakakaya</a>
-        <script>
-            ! function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0],
-                    p = /^http:/.test(d.location) ? 'http' : 'https';
-                if (!d.getElementById(id)) {
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = p + '://platform.twitter.com/widgets.js';
-                    fjs.parentNode.insertBefore(js, fjs);
-                }
-            }(document, 'script', 'twitter-wjs');
-        </script>
-        <a class="github-button" href="https://github.com/kakakaya" aria-label="Follow @kakakaya on GitHub">Follow @kakakaya</a>
-        <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+        <p>&copy; kakakaya.xyz</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>
